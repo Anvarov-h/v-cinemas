@@ -1,0 +1,222 @@
+
+@media(max-width:1440px){
+    .header{
+        height: 640px;
+    }
+}
+
+@media(max-width:1024px){
+    .header{
+        height: 440px;
+    }
+    .container{
+        max-width: 768px;
+    }
+    .films__content{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .films__item{
+        width: 45%;
+    }
+    .films__img{
+        object-fit: cover;
+        object-position: top;
+    }
+    .premier{
+        background: linear-gradient(90deg, #DEF7FF 0%, #F4FCFF 25.64%, rgba(255, 255, 255, 0) 100.72%);
+    }
+    .collections__item{
+        flex-shrink: 0;
+        scroll-snap-align: center;
+    }
+    .collections__content{
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+    .series__item:nth-of-type(2){
+        grid-column: span 4;
+        grid-row: 3;
+    }
+    .series__item:nth-of-type(2) .series__img{
+        object-position: 0 -142px;
+    }
+    .series__item:nth-of-type(3),
+    .series__item:nth-of-type(4),
+    .series__item:nth-of-type(5),
+    .series__item:nth-of-type(6){
+        grid-column: span 2;
+    }
+}
+@media(max-width:627px){
+    .header{
+        height: max-content;
+        padding: 30px 0;
+    }
+    .header__title{
+        font-size: 55px;
+        line-height: 60px;
+        margin-bottom: 15px;
+    }
+    .header__text{
+        margin-bottom: 20px;
+    }
+    .series__item:nth-of-type(2) .series__img{
+        object-position: top;
+    }
+    .series__text{
+        text-align: justify;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+    }
+}
+@media(max-width:575px){
+    .menu-btn{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        background: transparent;
+    }
+    .menu-btn>span{
+        width: 40px;
+        height: 2px;
+        background: #fff;
+        transition: 0.3s linear;
+    }
+    .menu-btn::after,
+    .menu-btn::before{
+        content: '';
+        width: 40px;
+        height: 2px;
+        display: block;
+        background: #fff;
+        transition: 0.3s linear;
+    }
+    .nav__list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 50px;
+        flex-direction: column;
+        gap: 25px;
+        backdrop-filter: blur(15px);
+        box-shadow: 5px 0px 20px 0px rgb(0 0 0 / 45%);
+        z-index: 1;
+        transition: 0.3s;
+        transform: translateX(-107%);
+    }
+    .nav__link{
+        padding: 0;
+    }
+    .nav{
+        padding: 15px;
+    }
+    .menu-btn:focus::before{
+        transform: translateY(12px) rotate(45deg);
+    }
+    .menu-btn:focus::after{
+        transform: translateY(-12px) rotate(135deg);
+    }
+    .menu-btn:focus>span{
+        opacity: 0;
+    }
+    .menu-btn:focus+.nav__list{
+        transform: translateX(0);
+    }
+    .films__item{
+        width: 255px;
+    }
+    .films__content{
+        flex-direction: column;
+    }
+    .premier__video{
+        display: none;
+    }
+    .premier{
+        background: var(--secondColor);
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+    .premier__text,
+    .premier__img{
+        margin-bottom: 15px;
+    }
+}
+@media(max-width:543px){
+    .header__title{
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+@media(max-width:460px){
+    .premier__img{
+        width: 100%;
+    }
+    .premier__text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .footer__content{
+        flex-direction: column;
+    }
+    .footer-span{
+        margin-top: 10px;
+    }
+    .footer{
+        padding: 10px 0;
+    }
+}
+@media(max-width:425px){
+    .reklama{
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .reklama>svg{
+        width: 40px;
+    }
+    .logo,
+    .reklama>span{
+        font-size: 14px;
+    }
+    .logo>img{
+        width: 70px;
+    }
+    .series__item:nth-of-type(1) .series__name{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .series__text{
+        
+    }
+}
+@media(max-width:403px){
+    .header__title{
+        font-size: 31px;
+        line-height: 38px;
+    }
+}
+@media(max-width:375px){
+    .header__buttons{
+        flex-direction: column;
+    }
+    .header__btn{
+        width: 100%;
+    }
+    .premier__btn{
+        width: 100%;
+    }
+}
+@media(max-width:360px){
+    .collections__item{
+        width: 100%;
+    }
+}
+@media(max-width:320px){
+    .films__item{
+        width: 100%
+    }
+}
